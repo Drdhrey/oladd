@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+
+    <!-------------------------------------------------FONT AWESOME------------------------------------------------------>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-------------------------------------------------REMIX ICONS------------------------------------------------------>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <!-------------------------------------------------SWIPPER CSS------------------------------------------------------>
+
+    <title>OLAD AGRO WEBSITE</title>
+  </head>
+
+  <body class="font-[poppins]">
+    <header class="bg-white">
+      <nav
+        class="flex justify-between items-center w-[92%] container mx-auto bg-red-400"
+      >
+        <div>
+          <img
+            src="/img/OLAD PICTURES/OLAD SVG PICTURES/SHIPPING SVG.jpg"
+            alt=""
+            class="w-12 h-12"
+          />
+        </div>
+
+        <div
+          class="nav-links md:static absolute bg-white md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5"
+        >
+          <ul
+            class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8"
+          >
+            <li><a class="hover:text-green-200 bg-white" href="#">HOME</a></li>
+            <li>
+              <a class="hover:text-green-200 bg-white" href="#">ABOUT-US</a>
+            </li>
+            <li>
+              <a class="hover:text-green-200 bg-white" href="#">PRODUCTS</a>
+            </li>
+            <li>
+              <a class="hover:text-green-200 bg-white" href="#">SERVICES</a>
+            </li>
+            <li>
+              <a class="hover:text-green-200 bg-green-900" href="#"
+                >CONTACT-US</a
+              >
+            </li>
+          </ul>
+          <div class="px-5 flex items-center">
+            <ion-icon
+              onclick="onToggleMenu(this)"
+              name="menu"
+              class="text-3xl cursor-pointer"
+            ></ion-icon>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <script>
+      const navLinks = document.querySelector(".nav-links");
+      function onToggleMenu(e) {
+        e.name = e.name === "menu" ? "close" : "menu";
+        navLinks.classList.toggle("top-[9%]");
+      }
+    </script>
+
+    <!-------------------------------------------------HERO SECTION------------------------------------------------------>
+    <div class="bg-cover bg-center w-[92%] mx-auto mt-2 relative">
+      <img src="./img/OLAD PICTURES/DESKTOP IMAGE 1.jpg" alt="" class="" />
+      <div>
+        <p class="text-white absolute font-bold mb-10">
+          CREATING SUSTAINABLE DEVELOPMENT OF AGRICULTURAL PRODUCE IN AFRICA
+        </p>
+        <div>
+          <button class="text-black">Learn More</button>
+        </div>
+      </div>
+    </div>
+
+    <!-------------------------------------------------OUR JOURNEY------------------------------------------------------>
+
+    <div
+      class="bg-[#23BD2A] container mx-auto mt-2 flex items-center justify-center h-12"
+    >
+      <p class="text-white font-bold lg:text-2xl md:text-2xl text-xs">OUR JOURNEY</p>
+    </div>
+
+    <div class="bg-[#D2E3D3] container mx-auto mt-2">
+      <p class="text-black  font-normal p-4 lg:text-xl md:text-xl text-xs">
+        Our journey has been to continually evolve around the challenges posed
+        by Agricultural deficits, posing a serious threat to Africa as a
+        continent, We have been putting to use all Agricultural best practices
+        so as to mitigate farm produce loses as a result of Un-ethical
+        agricultural practices obtainable on the African continent.
+      </p>
+    </div>
+
+    <!-------------------------------------------------HERO SECTION------------------------------------------------------>
+    <div
+      class="mt-8 flex items-center container mx-auto gap-8 md:flex-row flex-col sm:flex-col bg-blue-800"
+    >
+      <div class="w-6/12">
+        <img src="./img/OLAD PICTURES/DESKTOP IMAGE 1.jpg" alt="" />
+      </div>
+      <div class="w-6/12">
+        <img src="./img/OLAD PICTURES/DESKTOP IMAGE 1.jpg" alt="" />
+      </div>
+    </div>
+
+    <!-------------------------------------------------WHAT WE DO------------------------------------------------------>
+    <div
+      class="bg-[#23BD2A] flex w-[80%] mx-auto justify-center items-center mt-8 h-14 text-2xl"
+    >
+      <p class="text-white font-bold lg:text-2xl md:text-2xl text-xs">WHAT WE DO</p>
+    </div>
+
+    <div class="bg-[#b9f5be] w-[80%] mx-auto p-4 mt-2">
+      <p class="text-black p-4 lg:text-lg md:text-sm text-xs font-normal">
+        At olad Agro, we strive in making sure Agricultural processes that leads
+        to food sufficiency are simplified, ultimately leading to food
+        sufficeincy.
+      </p>
+    </div>
+
+    <!-------------------------------------------------HOW WE HELP------------------------------------------------------>
+    <div
+      class="bg-[#23BD2A] flex w-[80%] mx-auto justify-center items-center mt-2 h-14"
+    >
+      <p class="text-white p-4 font-bold lg:text-2xl md:text-2xl text-xs">HOW WE HELP</p>
+    </div>
+    first image
+    <div
+      class="flex container mx-auto justify-center items-center gap-6 mt-8 lg:flex-row md:flex-row flex-col "
+    >
+      <div class="w-6/12 h-[300px] lg:text-lg md:text-sm text-xs shadow-lg">
+        <h1
+          class="bg-[#23BD2A] flex justify-center items-center text-white font-bold h-9"
+        >
+          MAKING LAND AVAILABLE
+        </h1>
+        <p
+          class="bg-[#D2E3D3] mt-6 p-4 leading-5 lg:text-lg md:text-sm text-xs h-[230px] border-red-900 "
+        >
+          We work hand in hand with locals making sure the land is available and
+          affordable for intending Farmers we work within the budget you
+          present, and help facilitate on how best it can be achieved in no
+          distance time saving you lots of stress.
+        </p>
+      </div>
+
+      <div class=" w-6/12">
+        <img
+          src="./img/OLAD PICTURES/People working on farm lands.jpg"
+          alt=""
+          class="h-[300px] w-full"
+        />
+      </div>
+    </div>
+    second image
+    <div
+      class="flex container mx-auto justify-center items-center gap-6 mt-8 lg:flex-row md:flex-row flex-col "
+    >
+      <div class="w-6/12">
+        <img
+          src="./img/OLAD PICTURES/Food providers image.jpg"
+          alt=""
+          class="h-[400px] w-full"
+        />
+      </div>
+
+      <div class="w-6/12 h-[400px] shadow-lg">
+        <h1
+          class="bg-green-900 flex justify-center items-center text-white font-bold h-9"
+        >
+          MAKING FOOD AVAILABLE
+        </h1>
+        <p
+          class="bg-green-400 mt-6 p-8 leading-5 lg:text-lg md:text-sm text-xs"
+        >
+          We work hand in hand with locals making sure the land is available and
+          affordable for intending Farmers we work within the budget you
+          present, and help facilitate on how best it can be achieved in no
+          distance time saving you lots of stress.
+        </p>
+      </div>
+    </div>
+    THIRD IMAGE
+    <div
+      class="flex container mx-auto justify-center items-center gap-6 mt-8 lg:flex-row md:flex-row flex-col"
+    >
+      <div class="w-6/12 h-[300px] shadow-lg">
+        <h1
+          class="bg-green-900 flex justify-center items-center text-white font-bold h-9"
+        >
+          WAREHOUSE
+        </h1>
+        <p
+          class="bg-green-400 mt-6 p-8 leading-5 lg:text-lg md:text-sm text-xs"
+        >
+          We work hand in hand with locals making sure the land is available and
+          affordable for intending Farmers we work within the budget you
+          present, and help facilitate on how best it can be achieved in no
+          distance time saving you lots of stress.
+        </p>
+      </div>
+
+      <div class="w-6/12">
+        <img
+          src="./img/OLAD PICTURES/Warehouse image.jpg"
+          alt=""
+          class="h-[300px] w-full"
+        />
+      </div>
+    </div>
+
+    FOURTH IMAGE
+    <div
+      class="flex  container mx-auto justify-center items-centerjustify-center items-center gap-6 mt-8 lg:flex-row md:flex-row flex-col"
+    >
+      <div class="w-6/12">
+        <img
+          src="./img/OLAD PICTURES/Food Processing.jpg"
+          alt=""
+          class="h-[400px] w-full"
+        />
+      </div>
+
+      <div class="w-6/12 h-[400px] shadow-lg">
+        <h1
+          class="bg-green-900 flex justify-center items-center text-white font-bold h-9 lg:text-2xl md:text-xs text-xs p-2"
+        >
+          FOOD PRODUCERS AND CONSUMERS
+        </h1>
+        <p
+          class="bg-green-400 mt-6 p-8 leading-5 lg:text-lg md:text-sm text-xs"
+        >
+          We work hand in hand with locals making sure the land is available and
+          affordable for intending Farmers we work within the budget you
+          present, and help facilitate on how best it can be achieved in no
+          distance time saving you lots of stress.
+        </p>
+      </div>
+    </div>
+
+    <!-------------------------------------------------WHY CHOOSE OLAD FARMS ------------------------------------------------------>
+    <div class="bg-green-100 mt-10 mb-6 p-8">
+      <div
+        class="flex justify-center items-center h-9 bg-green-400 container mx-auto"
+      >
+        <h1 class="text-white lg:text-xl md:text-xl text-xs font-bold">WHY CHOOSE OLAD FARMS</h1>
+      </div>
+
+      
+        <div
+          class="mt-2 flex justify-center items-center container mx-auto bg-green-100 stroke-red-500 lg:flex-row md:flex-row flex-col lg:gap-48 md:gap-24 gap-12"
+        >
+          <div class="flex flex-col  px-6 mt-20">
+            <h1
+              class="text-green-700 text-xl font-bold mb-4 flex justify-center items-center"
+            >
+              1200+
+            </h1>
+            <p
+              class="text-black text-sm font-bold mb-4 flex justify-center items-center"
+            >
+              FARMERS
+            </p>
+            <img
+              src="./img/OLAD PICTURES/Farmers pix for why choose olad.jpg"
+              alt=""
+              class="rounded-full h-[200px] w-[200px] ring-2 ring-green-900 outline-4"
+            />
+          </div>
+
+          <div class="flex flex-col  px-6 mt-20">
+            <h1
+              class="text-green-700 text-xl font-bold mb-4 flex justify-center items-center"
+            >
+              1600+
+            </h1>
+            <p
+              class="text-black text-sm font-bold mb-4 flex justify-center items-center"
+            >
+              CUSTOMERS
+            </p>
+            <img
+              src="./img/OLAD PICTURES/Customers pix why choose olad.jpg"
+              alt=""
+              class="rounded-full h-[200px] w-[200px] ring-2 ring-green-900 outline-4"
+            />
+          </div>
+
+          <div class="flex flex-col  px-6 mt-20">
+            <h1
+              class="text-green-700 text-xl font-bold mb-6 flex justify-center items-center"
+            >
+              10000KG
+            </h1>
+            <p
+              class="text-black text-sm font-bold mb-6 flex justify-center items-center"
+            >
+              PRODUCT SHIPED
+            </p>
+            <img
+              src="./img/OLAD PICTURES/Shipment pix for why choose olad.jpg"
+              alt=""
+              class="rounded-full h-[200px] w-[200px] ring-2 ring-green-900 outline-4 rounded-50%"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-------------------------------------------------WHAT PEOPLE SAY ABOUT US------------------------------------------------------>
+    <div class="mt-12 bg-green-100">
+      <div class="flex justify-center items-center mx-auto">
+        <h1 class="lg:text-lg md:text-sm text-xs font-bold">
+          WHAT PEOPLE SAY ABOUT US
+        </h1>
+      </div>
+
+      <div class="flex justify-center items-center mx-auto mt-6 lg:text-lg md:text-sm text-xs font-bold">
+        <h5>Testimonials</h5>
+      </div>
+    </div>
+
+    <!-------------------------------------------------TESTIMONIALS------------------------------------------------------>
+
+    <div class="container mx-auto py-14 px-6 bg-[#f1f1f1] mt-10">
+      <div class="grid lg:grid-cols-4 md:grid-cols-4 grid-cols-1 bg-[#f1f1f1]">
+        <div class="flex flex-col gap-5 px-6 lg:text-lg md:text-sm text-xs">
+          <p class="py-6">
+            I have sponsored over 3 farms with Olad farms and payment timing,
+            Apart from this, I also enjoyed how i was always carried along
+            across all various process
+          </p>
+        </div>
+
+        <div class="flex flex-col gap-5 px-6 lg:text-lg md:text-sm text-xs">
+          <p class="py-6">
+            I have sponsored over 3 farms with Olad farms and payment timing,
+            Apart from this, I also enjoyed how i was always carried along
+            across all various process
+          </p>
+        </div>
+
+        <div class="flex flex-col gap-5 px-6 lg:text-lg md:text-sm text-xs">
+          <p class="py-6">
+            I have sponsored over 3 farms with Olad farms and payment timing,
+            Apart from this, I also enjoyed how i was always carried along
+            across all various process
+          </p>
+        </div>
+
+        <div class="flex flex-col gap-5 px-6 lg:text-lg md:text-sm text-xs">
+          <p class="py-6">
+            I have sponsored over 3 farms with Olad farms and payment timing,
+            Apart from this, I also enjoyed how i was always carried along
+            across all various process
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-------------------------------------------------FOOTER SECTION------------------------------------------------------>
+    <footer class="bg-[#f5f5f5] mt-10">
+      <div class="container mx-auto py-14 px-6 bg-[#f5f5f5]">
+        <div class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 bg-[#f5f5f5]">
+          <div class="flex flex-col gap-5 px-6 pb-6">
+            <h2 class="text-2xl font-bold">ABOUT-US</h2>
+            <p class="font-bold">
+              Olad Agrobusiness is the fastest growing Agro business in Nigeria,
+              we are into securing of farm lands for large, medium and small
+              scale Farmers bringing forth optimal yields i n Agro produce,
+              storing,processing, and conveying to the consumer
+            </p>
+          </div>
+
+          <div class="flex flex-col gap-5 px-6 pb-6">
+            <h2 class="text-2xl font-bold">QUICK LINKS</h2>
+            <ul class="list-none space-y-2">
+             <li class="font-bold  hover:text-green-200"><a href="">HOME</a></li>
+             <li class="font-bold  hover:text-green-200"><a href="">ABOUT US</a></li>
+             <li class="font-bold  hover:text-green-200"><a href="">PRODUCTS</a></li>
+             <li class="font-bold  hover:text-green-200"><a href="">SERVICES</a></li>
+             <li class="font-bold  hover:text-green-200"><a href="">CONTACT-US</a></li>
+            </ul>
+          </div>
+
+          <div class="flex flex-col gap-5 px-6 pb-6">
+            <h2 class="text-2xl font-bold">SOCIALS</h2>
+            <ul class="list-none">
+              <li class="flex hover:text-green-200 pb-2 font-bold">
+                <span class=""><i class="ri-facebook-fill"></i></span>
+                <h1 class="pl-2"><a href="www.facebook.com">FACEBOOK</a></h1>
+              </li>
+              <li class="flex  hover:text-green-200 pb-2 font-bold">
+                <span><i class="ri-twitter-fill"></i></span>
+                <h1 class="pl-2"><a href="www.x.com">TWITTER</a></h1>
+              </li>
+              <li class="flex hover:text-green-200 pb-2 font-bold">
+                <span><i class="ri-instagram-fill"></i></span>
+                <h1 class="pl-2"><a href="www.instagram.com">INSTAGRAM</a></h1>
+              </li>
+              <li class="flex  hover:text-green-200 pb-2 font-bold">
+                <span><i class="ri-mail-fill"></i></span>
+                <h1 class="pl-2"><a href="www.gmail.com">E-MAIL</a></h1>
+              </li> 
+            </ul>
+          </div>
+
+          <div class="flex flex-col gap-5 px-6 pb-6">
+            <h2 class="text-2xl font-bold">CONTACT</h2>
+            <ul class="">
+              <li class="flex pb-2 font-bold">
+                <span><i class="ri-map-pin-fill"></i></span>
+                <h1 class="pl-2">41 Cele 1 Embassy Avenue, Igbala sango-ota, Ogun state</h1>
+              </li>
+              <li class="flex pb-2 font-bold">
+                <span><i class="ri-map-pin-fill"></i></span>
+                <h1 class="pl-2">Oladagro605@gmail.com</h1>
+              </li>
+            </ul>
+            
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-------------------------------------------------HERO SECTION------------------------------------------------------>
+
+    <!-------------------------------------------------HERO SECTION------------------------------------------------------>
+  </body>
+</html>
