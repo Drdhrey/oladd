@@ -36,55 +36,110 @@
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
 
-    <!-------------------------------------------------SWIPPER CSS------------------------------------------------------>
+    <link rel="shortcut icon" href="img/olad-pictures/olad-svg-pictures/SHIPPING SVG.jpg" type="image/x-icon">
 
+    <!-------------------------------------------------SWIPPER CSS------------------------------------------------------>
     <title>OLAD AGRO WEBSITE</title>
   </head>
 
-  <body class="font-[poppins]">
-    <header class="bg-white">
-      <nav
-        class="flex justify-between items-center w-[92%] container mx-auto bg-red-400"
+  <body class="font-[poppins] px-2 lg:px-6 overflow-x-hidden">
+    <header class="relative h-[60vh] lg:h-[80vh]" style="background: linear-gradient(to right, #00000088, #00000088), url(img/olad-pictures/desktop-image-1.jpg);">
+      <!-- Navigation Bar -->
+      <nav class="fixed z-[999] w-[96.2%] md:w-[98%] lg:w-[97.2%] left-2 lg:left-5 top-0 right-2 flex justify-between items-center bg-[#23BD2A] rounded-[4px] lg:rounded-lg lg:py-2 px-2 lg:px-4 h-12 md:h-20 lg:h-24"
       >
-        <div>
+        <!-- Company's Logo -->
+        <a href="index.html">
           <img
-            src="/img/OLAD PICTURES/OLAD SVG PICTURES/SHIPPING SVG.jpg"
+            src="./img/olad-pictures/olad-svg-pictures/SHIPPING SVG.jpg"
             alt=""
-            class="w-12 h-12"
+            class="w-8 md:w-10 lg:w-12 h-8 md:h-10 lg:h-12"
           />
-        </div>
+        </a>
 
-        <div
-          class="nav-links md:static absolute bg-white md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5"
-        >
-          <ul
-            class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8"
-          >
-            <li><a class="hover:text-green-200 bg-white" href="#">HOME</a></li>
+        <!-- Navlinks Mobile View -->
+         <div class="md:hidden ml-[80%] relative">
+            <button type="button" class="flex flex-col gap-[7px]" onclick="toggleDropdown()" id="nav-button">
+              <span class="inline-block bg-white w-8 h-[4.5px]"></span>
+              <span class="inline-block bg-white w-8 h-[4.5px]"></span>
+              <span class="inline-block bg-white w-8 h-[4.5px]"></span>
+            </button>
+         </div>
+         <div class="hidden absolute top-11 right-0 text-end text-white z-40 bg-[#23BD2A] p-4 rounded-lg" id="mobile-dropdown">
+            <ul class="uppercase list-none flex flex-col gap-[10px]">
+              <li class="hover:pb-2 hover:border-b-4 border-white"><a href="">Home</a></li>
+              <li class="hover:pb-2 hover:border-b-4 border-white"><a href="">About-us</a></li>
+              <li class="hover:pb-2 hover:border-b-4 border-white"><a href="">Products</a></li>
+              <li class="hover:pb-2 hover:border-b-4 border-white"><a href="">Services</a></li>
+              <li class="hover:pb-2 hover:border-b-4 border-white"><a href="">contact-us</a></li>
+            </ul>
+         </div>
+         <!-- Navlinks dropdown functionality -->
+          <script>
+            const navBtn = document.querySelector("#nav-button");//Getting the button that triggers the dropdown
+            const mobileDropdown = document.querySelector("#mobile-dropdown");//Getting the dropdown menu
+            function toggleDropdown() {
+              mobileDropdown.classList.toggle("hidden");
+            }
+            
+            document.addEventListener("click", (event) => {
+              if (!mobileDropdown.contains(event.target) && !navBtn.contains(event.target)) {
+                mobileDropdown.classList.add("hidden");
+              }
+            })
+            
+          </script>
+
+
+        <!-- Navlinks Desktop view -->
+        <div class="hidden md:flex items-center px-5">
+          <ul class="flex md:items-center  gap-8 text-lg lg:text-xl">
+
+            <!-- Home -->
             <li>
-              <a class="hover:text-green-200 bg-white" href="#">ABOUT-US</a>
+              <a class="text-white font-semibold hover:text-green-900 hover:border-b-4 border-white hover:pb-1" href="#">HOME</a>
             </li>
+
+            <!-- About Us -->
             <li>
-              <a class="hover:text-green-200 bg-white" href="#">PRODUCTS</a>
+              <a class="text-white font-semibold hover:text-green-900 hover:border-b-4 border-white hover:pb-1" href="#">ABOUT-US</a>
             </li>
+
+            <!-- Products -->
             <li>
-              <a class="hover:text-green-200 bg-white" href="#">SERVICES</a>
+              <a class="text-white font-semibold hover:text-green-900 hover:border-b-4 border-white hover:pb-1" href="#">PRODUCTS</a>
             </li>
+
+            <!-- Services -->
             <li>
-              <a class="hover:text-green-200 bg-green-900" href="#"
-                >CONTACT-US</a
-              >
+              <a class="text-white font-semibold hover:text-green-900 hover:border-b-4 border-white hover:pb-1" href="#">SERVICES</a>
+            </li>
+
+            <!-- Contact Us -->
+            <li>
+              <a class="text-white font-semibold hover:text-green-900 hover:border-b-4 border-white hover:pb-1" href="#">CONTACT-US</a>
             </li>
           </ul>
-          <div class="px-5 flex items-center">
+
+          <!-- This should be activated for mobile screens -->
+          <!-- <div class="px-5 flex items-center">
             <ion-icon
               onclick="onToggleMenu(this)"
               name="menu"
-              class="text-3xl cursor-pointer"
+              class="text-3xl cursor-pointer block lg:hidden"
             ></ion-icon>
-          </div>
+          </div> -->
         </div>
       </nav>
+
+      <!-- Hero Section -->
+      <div class="flex flex-col gap-6 md:gap-12 lg:gap-8 pt-[10rem] md:pt-[14rem] lg:pt-[15rem] mx-auto">
+        <!-- Title -->
+        <h1 class="text-white font-extrabold text-[0.95rem] md:text-[1.5rem] lg:text-[2.2rem] max-w-[62rem] text-center leading-[2rem] md:leading-[3rem] lg:leading-[4rem] mx-auto">
+          CREATING SUSTAINABLE DEVELOPMENT OF
+          <span class="text-[1.5rem] md:text-[2.2rem] lg:text-[3.3rem]"> AGRICULTURAL PRODUCE IN AFRICA</span>
+        </h1>
+        <button type="button" class="text-white border-4 border-transparent cursor-pointer w-[120px] md:w-[150px] lg:w-[200px] mx-auto p-2 rounded-lg text-sm md:text-lg lg:text-xl font-bold bg-[#23BD2A] hover:bg-black">Learn More</button>
+      </div>
     </header>
 
     <script>
@@ -95,83 +150,61 @@
       }
     </script>
 
-    <!-------------------------------------------------HERO SECTION------------------------------------------------------>
-    <div class="bg-cover bg-center w-[92%] mx-auto mt-2 relative">
-      <img src="./img/OLAD PICTURES/DESKTOP IMAGE 1.jpg" alt="" class="" />
-      <div>
-        <p class="text-white absolute font-bold mb-10">
-          CREATING SUSTAINABLE DEVELOPMENT OF AGRICULTURAL PRODUCE IN AFRICA
+    
+    <!-- Our Journey -->
+    <div>
+      <!-- Subheading -->
+      <div class="bg-[#23BD2A]  mx-auto mt-2 flex items-center justify-center h-12">
+        <h2 class="text-white font-bold md:text-2xl text-lg">OUR JOURNEY</h2>
+      </div>
+
+      <!-- Paragraph -->
+      <div class="bg-[#D2E3D3]  mx-auto mt-2">
+        <p class="text-black  font-normal p-4 lg:text-xl md:text-lg text-xs">
+            Our journey has been to continually evolve around the challenges posed
+            by Agricultural deficits, posing a serious threat to Africa as a
+            continent, We have been putting to use all Agricultural best practices
+            so as to mitigate farm produce loses as a result of Un-ethical
+            agricultural practices obtainable on the African continent.
         </p>
-        <div>
-          <button class="text-black">Learn More</button>
-        </div>
       </div>
     </div>
 
-    <!-------------------------------------------------OUR JOURNEY------------------------------------------------------>
-
-    <div
-      class="bg-[#23BD2A] container mx-auto mt-2 flex items-center justify-center h-12"
-    >
-      <p class="text-white font-bold lg:text-2xl md:text-2xl text-xs">OUR JOURNEY</p>
+    <!-- Images Section -->
+    <div class="flex flex-col lg:flex-row gap-4 lg:gap-8 mt-8 max-h-[400px]">
+      <img src="img/olad-pictures/olad-sorghum.png" alt="" class="w-full lg:w-1/2">
+      <img src="img/olad-pictures/olad-produce.jpg" alt="" class="w-full lg:w-1/2">
     </div>
 
-    <div class="bg-[#D2E3D3] container mx-auto mt-2">
-      <p class="text-black  font-normal p-4 lg:text-xl md:text-xl text-xs">
-        Our journey has been to continually evolve around the challenges posed
-        by Agricultural deficits, posing a serious threat to Africa as a
-        continent, We have been putting to use all Agricultural best practices
-        so as to mitigate farm produce loses as a result of Un-ethical
-        agricultural practices obtainable on the African continent.
-      </p>
-    </div>
-
-    <!-------------------------------------------------HERO SECTION------------------------------------------------------>
-    <div
-      class="mt-8 flex items-center container mx-auto gap-8 md:flex-row flex-col sm:flex-col bg-blue-800"
-    >
-      <div class="w-6/12">
-        <img src="./img/OLAD PICTURES/DESKTOP IMAGE 1.jpg" alt="" />
+    <!-- What We Do -->
+    <div class="">
+      <!-- Subheading -->
+      <div class="bg-[#23BD2A] flex  mx-auto justify-center items-center mt-32 md:mt-[39rem] lg:mt-8 h-14 text-2xl">
+        <h2 class="text-white font-bold md:text-2xl text-lg">WHAT WE DO</h2>
       </div>
-      <div class="w-6/12">
-        <img src="./img/OLAD PICTURES/DESKTOP IMAGE 1.jpg" alt="" />
+
+      <!-- Paragraph -->
+      <div class="bg-[#D2E3D3] mx-auto lg:p-4 mt-2">
+        <p class="text-black p-4 lg:text-xl md:text-lg text-xs font-normal">
+          At Olad Agro, we strive in making sure Agricultural processes that leads
+          to food sufficiency are simplified, ultimately leading to food
+          sufficeincy.
+        </p>
       </div>
     </div>
 
-    <!-------------------------------------------------WHAT WE DO------------------------------------------------------>
-    <div
-      class="bg-[#23BD2A] flex w-[80%] mx-auto justify-center items-center mt-8 h-14 text-2xl"
-    >
-      <p class="text-white font-bold lg:text-2xl md:text-2xl text-xs">WHAT WE DO</p>
+    <!-- How We Help -->
+    <div class="bg-[#23BD2A] flex mx-auto justify-center items-center mt-8 h-14">
+      <h2 class="text-white p-4 font-bold md:text-2xl text-lg">HOW WE HELP</h2>
     </div>
+   
+    <!-- First Section in How We Help -->
+    <div class="flex mx-auto items-center gap-3 lg:gap-6 mt-4 lg:flex-row flex-col">
+      <!-- Left Content -->
+      <div class="w-full lg:w-6/12 h-[200px] lg:h-[400px] lg:text-xl md:text-lg text-sm shadow-lg ">
+        <h3 class="bg-[#23BD2A] flex justify-center items-center text-white font-bold h-9">MAKING LAND AVAILABLE</h3>
 
-    <div class="bg-[#b9f5be] w-[80%] mx-auto p-4 mt-2">
-      <p class="text-black p-4 lg:text-lg md:text-sm text-xs font-normal">
-        At olad Agro, we strive in making sure Agricultural processes that leads
-        to food sufficiency are simplified, ultimately leading to food
-        sufficeincy.
-      </p>
-    </div>
-
-    <!-------------------------------------------------HOW WE HELP------------------------------------------------------>
-    <div
-      class="bg-[#23BD2A] flex w-[80%] mx-auto justify-center items-center mt-2 h-14"
-    >
-      <p class="text-white p-4 font-bold lg:text-2xl md:text-2xl text-xs">HOW WE HELP</p>
-    </div>
-    first image
-    <div
-      class="flex container mx-auto justify-center items-center gap-6 mt-8 lg:flex-row md:flex-row flex-col "
-    >
-      <div class="w-6/12 h-[300px] lg:text-lg md:text-sm text-xs shadow-lg">
-        <h1
-          class="bg-[#23BD2A] flex justify-center items-center text-white font-bold h-9"
-        >
-          MAKING LAND AVAILABLE
-        </h1>
-        <p
-          class="bg-[#D2E3D3] mt-6 p-4 leading-5 lg:text-lg md:text-sm text-xs h-[230px] border-red-900 "
-        >
+        <p class="bg-[#D2E3D3] mt-4 p-4 leading-5 lg:text-lg md:text-base text-xs lg:h-[350px] flex items-center">
           We work hand in hand with locals making sure the land is available and
           affordable for intending Farmers we work within the budget you
           present, and help facilitate on how best it can be achieved in no
@@ -179,35 +212,33 @@
         </p>
       </div>
 
-      <div class=" w-6/12">
+      <!-- Right Content -->
+      <div class="w-full lg:w-6/12">
         <img
-          src="./img/OLAD PICTURES/People working on farm lands.jpg"
+          src="./img/olad-pictures/People-working-on-farm-lands.jpg"
           alt=""
-          class="h-[300px] w-full"
+          class="h-[200px] lg:h-[400px] w-full"
         />
       </div>
     </div>
-    second image
-    <div
-      class="flex container mx-auto justify-center items-center gap-6 mt-8 lg:flex-row md:flex-row flex-col "
-    >
-      <div class="w-6/12">
+  
+    <!-- Second section of How We Help -->
+    <div class="flex mx-auto justify-center items-center gap-3 lg:gap-6 mt-8 lg:flex-row flex-col-reverse">
+      <!-- Left Content -->
+      <div class="w-full lg:w-6/12">
         <img
-          src="./img/OLAD PICTURES/Food providers image.jpg"
+          src="./img/olad-pictures/Food-providers-image.jpg"
           alt=""
-          class="h-[400px] w-full"
+          class="h-[200px] lg:h-[400px] w-full"
         />
       </div>
 
-      <div class="w-6/12 h-[400px] shadow-lg">
-        <h1
-          class="bg-green-900 flex justify-center items-center text-white font-bold h-9"
-        >
+      <!-- Right Content -->
+      <div class="w-full lg:w-6/12 h-[200px] lg:h-[400px] shadow-lg ">
+        <h3 class="bg-[#23BD2A] flex justify-center items-center text-white font-bold lg:text-xl md:text-lg text-sm h-9">
           MAKING FOOD AVAILABLE
-        </h1>
-        <p
-          class="bg-green-400 mt-6 p-8 leading-5 lg:text-lg md:text-sm text-xs"
-        >
+        </h3>
+        <p class="bg-[#D2E3D3] mt-4 p-4 lg:h-[350px] leading-5 lg:text-lg md:text-base text-xs flex items-center">
           We work hand in hand with locals making sure the land is available and
           affordable for intending Farmers we work within the budget you
           present, and help facilitate on how best it can be achieved in no
@@ -215,19 +246,15 @@
         </p>
       </div>
     </div>
-    THIRD IMAGE
-    <div
-      class="flex container mx-auto justify-center items-center gap-6 mt-8 lg:flex-row md:flex-row flex-col"
-    >
-      <div class="w-6/12 h-[300px] shadow-lg">
-        <h1
-          class="bg-green-900 flex justify-center items-center text-white font-bold h-9"
-        >
+  
+    <!-- Third Section of How We Help -->
+    <div class="flex  mx-auto justify-center items-center gap-3 lg:gap-6 mt-8 lg:flex-row flex-col">
+      <!-- Left Content -->
+      <div class="w-full lg:w-6/12 h-[200px] lg:h-[400px] shadow-lg">
+        <h3 class="bg-[#23BD2A] flex justify-center items-center text-white lg:text-xl md:text-lg text-sm font-bold h-9">
           WAREHOUSE
-        </h1>
-        <p
-          class="bg-green-400 mt-6 p-8 leading-5 lg:text-lg md:text-sm text-xs"
-        >
+        </h3>
+        <p class="bg-[#D2E3D3] mt-4 p-4 lg:h-[350px] leading-5 lg:text-lg md:text-base text-xs flex items-center">
           We work hand in hand with locals making sure the land is available and
           affordable for intending Farmers we work within the budget you
           present, and help facilitate on how best it can be achieved in no
@@ -235,36 +262,33 @@
         </p>
       </div>
 
-      <div class="w-6/12">
+      <!-- Right Content -->
+      <div class="w-full lg:w-6/12">
         <img
-          src="./img/OLAD PICTURES/Warehouse image.jpg"
+          src="./img/olad-pictures/Warehouse-image.jpg"
           alt=""
-          class="h-[300px] w-full"
+          class="h-[200px] lg:h-[400px] w-full"
         />
       </div>
     </div>
 
-    FOURTH IMAGE
-    <div
-      class="flex  container mx-auto justify-center items-centerjustify-center items-center gap-6 mt-8 lg:flex-row md:flex-row flex-col"
-    >
-      <div class="w-6/12">
+    <!-- Fourth Section of How We Help -->
+    <div class="flex mx-auto justify-center items-centerjustify-center items-center gap-3 lg:gap-6 mt-8 lg:flex-row flex-col-reverse">
+      <!-- Left Content -->
+      <div class="w-full lg:w-6/12">
         <img
-          src="./img/OLAD PICTURES/Food Processing.jpg"
+          src="./img/olad-pictures/Food-Processing.jpg"
           alt=""
-          class="h-[400px] w-full"
+          class="h-[200px] md:h-[300px] lg:h-[400px] w-full"
         />
       </div>
 
-      <div class="w-6/12 h-[400px] shadow-lg">
-        <h1
-          class="bg-green-900 flex justify-center items-center text-white font-bold h-9 lg:text-2xl md:text-xs text-xs p-2"
-        >
+      <!-- Right Content -->
+      <div class="w-full lg:w-6/12 h-[200px] lg:h-[400px] shadow-lg">
+        <h3 class="bg-[#23BD2A] flex justify-center items-center text-white lg:text-xl md:text-lg text-sm font-bold h-9">
           FOOD PRODUCERS AND CONSUMERS
-        </h1>
-        <p
-          class="bg-green-400 mt-6 p-8 leading-5 lg:text-lg md:text-sm text-xs"
-        >
+        </h3>
+        <p class="bg-[#D2E3D3] mt-4 p-4 lg:h-[350px] leading-5 lg:text-lg md:text-base text-xs flex items-center">
           We work hand in hand with locals making sure the land is available and
           affordable for intending Farmers we work within the budget you
           present, and help facilitate on how best it can be achieved in no
@@ -273,92 +297,75 @@
       </div>
     </div>
 
-    <!-------------------------------------------------WHY CHOOSE OLAD FARMS ------------------------------------------------------>
-    <div class="bg-green-100 mt-10 mb-6 p-8">
-      <div
-        class="flex justify-center items-center h-9 bg-green-400 container mx-auto"
-      >
-        <h1 class="text-white lg:text-xl md:text-xl text-xs font-bold">WHY CHOOSE OLAD FARMS</h1>
+    <!-- Why Choose Olad Farms -->
+    <div class="bg-[#D2E3D3] mt-10 mb-6 p-4 lg:p-8 ">
+      <div class="flex justify-center items-center h-9 bg-[#23BD2A] mx-auto">
+        <h2 class="text-white lg:text-2xl md:text-xl text-lg font-bold">WHY CHOOSE OLAD FARMS</h2>
       </div>
-
-      
-        <div
-          class="mt-2 flex justify-center items-center container mx-auto bg-green-100 stroke-red-500 lg:flex-row md:flex-row flex-col lg:gap-48 md:gap-24 gap-12"
-        >
-          <div class="flex flex-col  px-6 mt-20">
-            <h1
-              class="text-green-700 text-xl font-bold mb-4 flex justify-center items-center"
-            >
-              1200+
-            </h1>
-            <p
-              class="text-black text-sm font-bold mb-4 flex justify-center items-center"
-            >
-              FARMERS
-            </p>
-            <img
-              src="./img/OLAD PICTURES/Farmers pix for why choose olad.jpg"
-              alt=""
-              class="rounded-full h-[200px] w-[200px] ring-2 ring-green-900 outline-4"
-            />
-          </div>
-
-          <div class="flex flex-col  px-6 mt-20">
-            <h1
-              class="text-green-700 text-xl font-bold mb-4 flex justify-center items-center"
-            >
-              1600+
-            </h1>
-            <p
-              class="text-black text-sm font-bold mb-4 flex justify-center items-center"
-            >
-              CUSTOMERS
-            </p>
-            <img
-              src="./img/OLAD PICTURES/Customers pix why choose olad.jpg"
-              alt=""
-              class="rounded-full h-[200px] w-[200px] ring-2 ring-green-900 outline-4"
-            />
-          </div>
-
-          <div class="flex flex-col  px-6 mt-20">
-            <h1
-              class="text-green-700 text-xl font-bold mb-6 flex justify-center items-center"
-            >
-              10000KG
-            </h1>
-            <p
-              class="text-black text-sm font-bold mb-6 flex justify-center items-center"
-            >
-              PRODUCT SHIPED
-            </p>
-            <img
-              src="./img/OLAD PICTURES/Shipment pix for why choose olad.jpg"
-              alt=""
-              class="rounded-full h-[200px] w-[200px] ring-2 ring-green-900 outline-4 rounded-50%"
-            />
-          </div>
+          
+      <div class="mt-2 flex justify-center items-center lg:mx-auto bg-green-100 stroke-red-500 lg:flex-row  flex-col lg:gap-48 md:gap-24 gap-12 pb-6">
+        <div class="flex flex-col px-6 mt-5 md:mt-10 lg:mt-20 justify-center items-center">
+          <h3 class="text-green-700 text-xl font-bold mb-4">
+            1200+
+          </h3>
+          <p class="text-black text-sm font-bold mb-4">
+            FARMERS
+          </p>
+          <img
+            src="./img/olad-pictures/Farmers-pix-for-why-choose-olad.jpg"
+            alt=""
+            class="rounded-full h-[200px] w-[200px] ring-2 ring-green-900 outline-4"
+          />
         </div>
-      </div>
+
+        <div class="flex flex-col px-6 mt-5 md:mt-10 lg:mt-20 justify-center items-center">
+          <h3 class="text-green-700 text-xl font-bold mb-4">
+            1600+
+          </h3>
+          <p class="text-black text-sm font-bold mb-4">
+            CUSTOMERS
+          </p>
+          <img
+            src="./img/olad-pictures/Customers-pix-why-choose-olad.jpg"
+            alt=""
+            class="rounded-full h-[200px] w-[200px] ring-2 ring-green-900 outline-4"
+          />
+        </div>
+
+        <div class="flex flex-col px-6 mt-5 md:mt-10 lg:mt-20 justify-center items-center">
+          <h3 class="text-green-700 text-xl font-bold mb-4">
+            10000KG
+          </h3>
+          <p class="text-black text-sm font-bold mb-4">
+            PRODUCT SHIPPED
+          </p>
+          <img
+            src="./img/olad-pictures/Shipment-pix-for-why-choose-olad.jpg"
+            alt=""
+            class="rounded-full h-[200px] w-[200px] ring-2 ring-green-900 outline-4 rounded-50%"
+          />
+        </div>
+        </div>
+      
     </div>
 
-    <!-------------------------------------------------WHAT PEOPLE SAY ABOUT US------------------------------------------------------>
-    <div class="mt-12 bg-green-100">
+   <!-- What People Say About Us -->
+    <div class="mt-12 bg-green-100 py-6">
       <div class="flex justify-center items-center mx-auto">
-        <h1 class="lg:text-lg md:text-sm text-xs font-bold">
+        <h2 class="lg:text-2xl md:text-xl text-lg font-bold">
           WHAT PEOPLE SAY ABOUT US
-        </h1>
+        </h2>
       </div>
 
-      <div class="flex justify-center items-center mx-auto mt-6 lg:text-lg md:text-sm text-xs font-bold">
+      <div class="flex justify-center items-center mx-auto mt-6 lg:text-lg md:text-base text-sm font-bold">
         <h5>Testimonials</h5>
       </div>
     </div>
 
-    <!-------------------------------------------------TESTIMONIALS------------------------------------------------------>
+    <!-- Testimonials -->
 
-    <div class="container mx-auto py-14 px-6 bg-[#f1f1f1] mt-10">
-      <div class="grid lg:grid-cols-4 md:grid-cols-4 grid-cols-1 bg-[#f1f1f1]">
+    <div class=" mx-auto py-0 lg:py-14 px-0 lg:px-6 bg-[#f1f1f1] mt-5 lg:mt-10">
+      <div class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 bg-[#f1f1f1]">
         <div class="flex flex-col gap-5 px-6 lg:text-lg md:text-sm text-xs">
           <p class="py-6">
             I have sponsored over 3 farms with Olad farms and payment timing,
@@ -393,11 +400,11 @@
       </div>
     </div>
 
-    <!-------------------------------------------------FOOTER SECTION------------------------------------------------------>
-    <footer class="bg-[#f5f5f5] mt-10">
-      <div class="container mx-auto py-14 px-6 bg-[#f5f5f5]">
+    <!-- Footer Section -->
+    <footer class="bg-[#f5f5f5] mt-10 ">
+      <div class=" mx-auto py-7 lg:py-14 px-0 lg:px-6 bg-[#f5f5f5]">
         <div class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 bg-[#f5f5f5]">
-          <div class="flex flex-col gap-5 px-6 pb-6">
+          <div class="flex flex-col gap-3 lg:gap-5 px-6 pb-10 lg:pb-6">
             <h2 class="text-2xl font-bold">ABOUT-US</h2>
             <p class="font-bold">
               Olad Agrobusiness is the fastest growing Agro business in Nigeria,
@@ -407,40 +414,40 @@
             </p>
           </div>
 
-          <div class="flex flex-col gap-5 px-6 pb-6">
+          <div class="flex flex-col gap-3 lg:gap-5 px-6 pb-10 lg:pb-6">
             <h2 class="text-2xl font-bold">QUICK LINKS</h2>
             <ul class="list-none space-y-2">
-             <li class="font-bold  hover:text-green-200"><a href="">HOME</a></li>
-             <li class="font-bold  hover:text-green-200"><a href="">ABOUT US</a></li>
-             <li class="font-bold  hover:text-green-200"><a href="">PRODUCTS</a></li>
-             <li class="font-bold  hover:text-green-200"><a href="">SERVICES</a></li>
-             <li class="font-bold  hover:text-green-200"><a href="">CONTACT-US</a></li>
+             <li class="font-bold  hover:ml-4 hover:text-[#23BD2A]"><a href="">HOME</a></li>
+             <li class="font-bold  hover:ml-4 hover:text-[#23BD2A]"><a href="">ABOUT US</a></li>
+             <li class="font-bold  hover:ml-4 hover:text-[#23BD2A]"><a href="">PRODUCTS</a></li>
+             <li class="font-bold  hover:ml-4 hover:text-[#23BD2A]"><a href="">SERVICES</a></li>
+             <li class="font-bold  hover:ml-4 hover:text-[#23BD2A]"><a href="">CONTACT-US</a></li>
             </ul>
           </div>
 
-          <div class="flex flex-col gap-5 px-6 pb-6">
+          <div class="flex flex-col gap-3 lg:gap-5 px-6 pb-10 lg:pb-6">
             <h2 class="text-2xl font-bold">SOCIALS</h2>
             <ul class="list-none">
-              <li class="flex hover:text-green-200 pb-2 font-bold">
+              <li class="flex hover:ml-4 hover:text-[#23BD2A] pb-2 font-bold">
                 <span class=""><i class="ri-facebook-fill"></i></span>
                 <h1 class="pl-2"><a href="www.facebook.com">FACEBOOK</a></h1>
               </li>
-              <li class="flex  hover:text-green-200 pb-2 font-bold">
+              <li class="flex  hover:ml-4 hover:text-[#23BD2A] pb-2 font-bold">
                 <span><i class="ri-twitter-fill"></i></span>
                 <h1 class="pl-2"><a href="www.x.com">TWITTER</a></h1>
               </li>
-              <li class="flex hover:text-green-200 pb-2 font-bold">
+              <li class="flex hover:ml-4 hover:text-[#23BD2A] pb-2 font-bold">
                 <span><i class="ri-instagram-fill"></i></span>
                 <h1 class="pl-2"><a href="www.instagram.com">INSTAGRAM</a></h1>
               </li>
-              <li class="flex  hover:text-green-200 pb-2 font-bold">
+              <li class="flex  hover:ml-4 hover:text-[#23BD2A] pb-2 font-bold">
                 <span><i class="ri-mail-fill"></i></span>
                 <h1 class="pl-2"><a href="www.gmail.com">E-MAIL</a></h1>
               </li> 
             </ul>
           </div>
 
-          <div class="flex flex-col gap-5 px-6 pb-6">
+          <div class="flex flex-col gap-3 lg:gap-5 px-6 pb-10 lg:pb-6">
             <h2 class="text-2xl font-bold">CONTACT</h2>
             <ul class="">
               <li class="flex pb-2 font-bold">
